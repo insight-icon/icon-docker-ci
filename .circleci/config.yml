@@ -9,17 +9,14 @@ jobs:
       - run:
           name: release
           command: |
-            docker build -t insightinfrastructure/imagename .
+            docker build -t insighticon/icon-docker-ci .
             npm run semantic-release
 
 workflows:
   version: 2
   pipeline:
     jobs:
-      - test
       - release:
-          requires:
-            - test
           filters:
             branches:
               only: master
