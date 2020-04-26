@@ -14,6 +14,8 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
     libssl-dev \
     build-essential \
     automake \
+    make \
+    gcc \
     pkg-config \
     libtool \
     libffi-dev \
@@ -72,3 +74,6 @@ RUN curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash - && apt-get i
 RUN wget https://github.com/gruntwork-io/cloud-nuke/releases/download/v0.1.13/cloud-nuke_linux_amd64 -O /usr/local/bin/cloud-nuke \
 	&& chmod u+x /usr/local/bin/cloud-nuke
 
+RUN curl -s https://storage.googleapis.com/golang/go1.13.linux-amd64.tar.gz| tar -v -C /usr/local -xz
+
+ENV PATH $PATH:/usr/local/go/bin
