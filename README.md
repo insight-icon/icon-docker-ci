@@ -38,10 +38,6 @@ terraform-icon-monitor-aws-network:
 
 [![CircleCI](https://circleci.com/gh/insight-icon/terraform-icon-monitor-aws-network\.svg?style=svg)]
 
-icon-cachet-monitor:
-
-[![CircleCI](https://circleci.com/gh/insight-icon/icon-cachet-monitor\.svg?style=svg)]
-
 
 terraform-icon-gcp-network:
 
