@@ -45,6 +45,8 @@ RUN pip3 install setuptools wheel
 RUN pip3 install \
     cookiecutter \
     ansible \
+    docker \
+    molecule \
     requests \
     preptools \
     fire \
@@ -77,3 +79,5 @@ RUN wget https://github.com/gruntwork-io/cloud-nuke/releases/download/v0.1.13/cl
 RUN curl -s https://storage.googleapis.com/golang/go1.13.linux-amd64.tar.gz| tar -v -C /usr/local -xz
 
 ENV PATH $PATH:/usr/local/go/bin
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
